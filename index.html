@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PureShot: Process Zero Cam</title>
+  <meta name="description" content="PureShot support, privacy, and device information for the free Process Zero Cam launch.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PureShot</p>
+        <h1>Process Zero Cam for natural iPhone capture.</h1>
+        <p class="lede">PureShot is a fully free professional camera app for iPhone 15 and newer, built around RAW-first stills, manual controls, clean video paths, and local-only media handling.</p>
+        <div class="cta-row">
+          <a class="button primary" href="#support">Support</a>
+          <a class="button secondary" href="#privacy">Privacy</a>
+        </div>
+      </div>
+      <div class="identity-card" aria-label="PureShot app identity">
+        <img src="assets/pureshot-icon-bayer-aperture.svg" alt="PureShot app icon concept">
+        <span>P.0</span>
+      </div>
+    </section>
+
+    <section class="panel grid" aria-labelledby="support-title" id="support">
+      <div>
+        <p class="eyebrow">Support URL</p>
+        <h2 id="support-title">Reviewer-ready support surface</h2>
+      </div>
+      <div class="stack">
+        <p>Use this page as the support and privacy reference for the free PureShot launch. It documents the implemented device, permission, privacy, and manual-control contract for App Review and early users.</p>
+        <p>The App Store download link will be added here after the free build is approved and live.</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="privacy-title" id="privacy">
+      <p class="eyebrow">Privacy</p>
+      <h2 id="privacy-title">Zero tracking. Local processing.</h2>
+      <div class="feature-list">
+        <article>
+          <h3>No third-party trackers</h3>
+          <p>PureShot does not add analytics SDKs, ad tracking, cookies, or third-party telemetry to the launch app.</p>
+        </article>
+        <article>
+          <h3>Media stays local</h3>
+          <p>Capture metadata and saved media remain on the device unless the user explicitly exports through iOS system flows.</p>
+        </article>
+        <article>
+          <h3>Permission scope</h3>
+          <p>Camera access opens the viewfinder. Microphone access is requested only when the user enters video capture.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="devices-title">
+      <p class="eyebrow">Supported Devices</p>
+      <h2 id="devices-title">iPhone 15 and newer baseline.</h2>
+      <div class="device-table" role="table" aria-label="PureShot device support matrix">
+        <div role="row">
+          <span role="columnheader">iPhone 15+</span>
+          <span role="cell">Process Zero stills, manual controls, quick launch, and the main camera shell.</span>
+        </div>
+        <div role="row">
+          <span role="columnheader">Supported Pro hardware</span>
+          <span role="cell">Apple Log, ProRes-oriented workflows, and external SSD indicators where the hardware and media path support them.</span>
+        </div>
+        <div role="row">
+          <span role="columnheader">Unsupported hardware</span>
+          <span role="cell">PureShot shows explicit diagnostic fallback messaging instead of silently hiding unavailable features.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="manual-title">
+      <p class="eyebrow">Manual Controls</p>
+      <h2 id="manual-title">Operator notes</h2>
+      <div class="feature-list">
+        <article>
+          <h3>Exposure</h3>
+          <p>Use manual exposure controls to hold ISO and shutter behavior when the camera hardware exposes those controls.</p>
+        </article>
+        <article>
+          <h3>Focus</h3>
+          <p>Manual focus is hardware-gated and available when the active iPhone camera supports locked custom lens positioning.</p>
+        </article>
+        <article>
+          <h3>Video 180-degree rule</h3>
+          <p>For natural motion, start near a shutter speed close to double the frame rate, then adjust intentionally for the scene.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="evidence-title">
+      <p class="eyebrow">Media Kit</p>
+      <h2 id="evidence-title">Current review evidence</h2>
+      <div class="shot-grid">
+        <figure>
+          <img src="assets/screenshots/01-launch-unsupported-camera.png" alt="PureShot launch diagnostic evidence">
+          <figcaption>Launch and diagnostic handling</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/02-ios-settings-pureshot.png" alt="iOS Settings permission screen for PureShot">
+          <figcaption>iOS permission surface</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/03-simulator-unsupported-hardware.png" alt="PureShot unsupported hardware state on simulator">
+          <figcaption>Hardware-gated fallback</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/04-home-screen-icon.png" alt="PureShot home screen icon evidence">
+          <figcaption>P.0 brand evidence</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>PureShot V1 is fully free. Premium, subscriptions, analytics, tracking, and cloud upload are not part of the launch build.</p>
+    </footer>
+  </main>
+</body>
+</html>

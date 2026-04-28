@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">PureShot Bayer Aperture Plate concept</title>
+  <desc id="desc">Obsidian matte square with a sharp aperture ring and Bayer-inspired center tile.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111418"/>
+      <stop offset="100%" stop-color="#0A0C0E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="226" fill="url(#bg)"/>
+  <rect x="84" y="84" width="856" height="856" rx="188" fill="none" stroke="#1A1E23" stroke-width="10"/>
+  <path fill="#F3F4F2" fill-rule="evenodd" d="M512 216L721 303L808 512L721 721L512 808L303 721L216 512L303 303Z M512 338L635 389L686 512L635 635L512 686L389 635L338 512L389 389Z"/>
+  <rect x="436" y="436" width="72" height="72" rx="10" fill="#F3F4F2"/>
+  <rect x="516" y="436" width="72" height="72" rx="10" fill="#A7ADA8"/>
+  <rect x="436" y="516" width="72" height="72" rx="10" fill="#A7ADA8"/>
+  <rect x="516" y="516" width="72" height="72" rx="10" fill="#111418"/>
+  <rect x="606" y="418" width="20" height="20" rx="5" fill="#B7261E"/>
+</svg>
