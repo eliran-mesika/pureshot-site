@@ -87,6 +87,7 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -99,19 +100,19 @@ img {
   height: 44px;
   place-items: center;
   border: 1px solid var(--line-strong);
-  overflow: visible;
+  overflow: hidden;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.42);
   color: transparent;
   box-shadow: 0 8px 24px rgba(62, 68, 62, 0.16);
 }
 
 .brand-dot img {
   display: block;
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 .brand-copy strong,
@@ -145,15 +146,16 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: 18px;
   min-height: 390px;
 }
 
 .hero-copy,
-.identity-card,
+.launch-card,
 .panel,
 .legal-card {
+  min-width: 0;
   border: 1px solid var(--line);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(218, 222, 216, 0.76)),
@@ -188,6 +190,8 @@ img {
 .hero-copy > * {
   position: relative;
   z-index: 1;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .eyebrow {
@@ -208,7 +212,6 @@ img {
 
 .status-pill,
 .button,
-.mini-stat,
 .spec-chip {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.46);
@@ -226,6 +229,7 @@ img {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: normal;
 }
 
 .status-pill.hot {
@@ -246,6 +250,7 @@ h2 {
   color: var(--paper);
   font-weight: 900;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -274,6 +279,7 @@ p,
 li {
   color: var(--titanium-soft);
   line-height: 1.72;
+  overflow-wrap: break-word;
 }
 
 .lede {
@@ -313,20 +319,21 @@ li {
   transform: translateY(-1px);
 }
 
-.identity-card {
+.launch-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 260px;
-  padding: 16px;
+  gap: 18px;
+  min-height: 390px;
+  padding: clamp(20px, 2.6vw, 28px);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.84), transparent 12rem),
+    radial-gradient(circle at 100% 0%, rgba(47, 117, 109, 0.12), transparent 12rem),
     linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(211, 216, 210, 0.78)),
-    repeating-conic-gradient(from 0deg at 50% 42%, rgba(31, 36, 34, 0.034) 0deg 0.28deg, transparent 0.28deg 1.2deg);
+    repeating-linear-gradient(100deg, rgba(31, 36, 34, 0.034) 0 1px, transparent 1px 14px);
 }
 
-.identity-top {
+.launch-card-top {
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -337,48 +344,50 @@ li {
   text-transform: uppercase;
 }
 
-.icon-stage {
-  display: grid;
-  place-items: center;
-  min-height: 118px;
+.launch-card h2 {
+  margin: auto 0 0;
+  font-size: clamp(1.6rem, 2.35vw, 2.4rem);
 }
 
-.icon-stage img {
-  width: min(132px, 56%);
-  border-radius: 30px;
-  box-shadow: 0 18px 44px rgba(60, 66, 60, 0.22);
-  filter: none;
+.launch-card p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
 }
 
-.identity-footer {
+.launch-proof {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-.mini-stat {
-  min-height: 56px;
-  padding: 10px;
-  border-radius: 16px;
+.proof-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.48);
 }
 
-.mini-stat strong,
-.mini-stat span {
+.proof-row strong,
+.proof-row span {
   display: block;
 }
 
-.mini-stat strong {
+.proof-row strong {
   color: var(--paper);
-  font-size: 0.9rem;
+  font-size: 0.74rem;
+  font-weight: 900;
   letter-spacing: 0;
+  text-transform: uppercase;
 }
 
-.mini-stat span {
-  margin-top: 6px;
+.proof-row span {
   color: var(--titanium-dim);
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   line-height: 1.4;
-  text-transform: uppercase;
 }
 
 .panel,
@@ -585,35 +594,8 @@ li {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero-copy,
-  .identity-card,
-  .panel,
-  .legal-card {
-    animation: rise-in 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  }
-
-  .panel:nth-of-type(2) {
-    animation-delay: 80ms;
-  }
-
-  .panel:nth-of-type(3) {
-    animation-delay: 150ms;
-  }
-
   .button {
     transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-  }
-}
-
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -632,8 +614,8 @@ li {
     min-height: auto;
   }
 
-  .identity-card {
-    min-height: 220px;
+  .launch-card {
+    min-height: 280px;
   }
 
   .shot-grid img {
@@ -643,19 +625,33 @@ li {
 
 @media (max-width: 680px) {
   .page-shell {
-    width: min(100% - 20px, 1180px);
-    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 10px 42px;
   }
 
   .site-nav {
     position: static;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: flex-start;
+    gap: 10px;
     border-radius: 24px;
   }
 
+  .brand-mark {
+    width: 100%;
+  }
+
   .nav-links {
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
   }
 
   .brand-copy span {
@@ -663,7 +659,7 @@ li {
   }
 
   .hero-copy,
-  .identity-card,
+  .launch-card,
   .panel,
   .legal-card {
     border-radius: 24px;
@@ -674,16 +670,44 @@ li {
     padding: 22px;
   }
 
+  .status-strip {
+    margin-bottom: 44px;
+  }
+
+  .status-pill {
+    max-width: 100%;
+  }
+
+  .status-pill:nth-child(3) {
+    display: none;
+  }
+
   h1 {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: 1.72rem;
   }
 
   h2 {
-    font-size: clamp(1.45rem, 6.5vw, 2.15rem);
+    font-size: 1.28rem;
+  }
+
+  .launch-card h2 {
+    font-size: 1.28rem;
+  }
+
+  .lede,
+  .launch-card p {
+    font-size: 0.78rem;
+  }
+
+  .hero-copy > *,
+  .launch-card > *,
+  .panel > * {
+    width: 100%;
+    max-width: 300px;
   }
 
   .device-table div,
-  .identity-footer {
+  .proof-row {
     grid-template-columns: 1fr;
   }
 
