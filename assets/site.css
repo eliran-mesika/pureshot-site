@@ -1171,7 +1171,15 @@ li {
 
 .footer-links {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding-block: 4px;
 }
 
 .legal-page {
