@@ -356,8 +356,9 @@ li {
 .camera-shot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
+  padding: 10px;
 }
 
 .camera-main {
@@ -548,7 +549,14 @@ li {
 }
 
 .shot-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) repeat(2, minmax(0, 0.92fr));
+  align-items: stretch;
+}
+
+.screen-lede {
+  max-width: 760px;
+  color: var(--titanium-dim);
+  line-height: 1.65;
 }
 
 .review-board {
@@ -584,16 +592,23 @@ li {
   position: relative;
   margin: 0;
   overflow: hidden;
+  display: grid;
+  align-content: space-between;
 }
 
 .shot-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
+  height: 520px;
+  object-fit: contain;
   object-position: top center;
   background: var(--carbon);
+  padding: 16px;
   filter: saturate(0.92) contrast(1.04);
+}
+
+.shot-feature img {
+  height: 620px;
 }
 
 .shot-grid figcaption {
@@ -753,8 +768,9 @@ li {
     height: 414px;
   }
 
-  .shot-grid img {
-    aspect-ratio: 16 / 10;
+  .shot-grid img,
+  .shot-feature img {
+    height: 560px;
   }
 }
 
@@ -858,6 +874,12 @@ li {
   .camera-note span {
     font-size: 0.94rem;
     overflow-wrap: anywhere;
+  }
+
+  .shot-grid img,
+  .shot-feature img {
+    height: 460px;
+    padding: 10px;
   }
 
   .hero-copy > *,
