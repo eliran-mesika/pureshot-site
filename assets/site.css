@@ -146,13 +146,14 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr);
   gap: 18px;
-  min-height: 390px;
+  min-height: 520px;
 }
 
 .hero-copy,
 .launch-card,
+.camera-proof,
 .panel,
 .legal-card {
   min-width: 0;
@@ -256,14 +257,14 @@ h2 {
 h1 {
   max-width: 620px;
   margin-bottom: 16px;
-  font-size: clamp(2.15rem, 3.4vw, 3.35rem);
+  font-size: 3.35rem;
   line-height: 1.04;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 16px;
-  font-size: clamp(1.55rem, 2.35vw, 2.25rem);
+  font-size: 2.25rem;
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -284,7 +285,7 @@ li {
 
 .lede {
   max-width: 620px;
-  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  font-size: 1rem;
 }
 
 .cta-row {
@@ -333,6 +334,73 @@ li {
     repeating-linear-gradient(100deg, rgba(31, 36, 34, 0.034) 0 1px, transparent 1px 14px);
 }
 
+.camera-proof {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 72% 20%, rgba(47, 117, 109, 0.18), transparent 14rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(211, 216, 210, 0.82));
+}
+
+.camera-shot {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgba(31, 36, 34, 0.16);
+  border-radius: 26px;
+  background: var(--carbon);
+  box-shadow: 0 26px 70px rgba(31, 36, 34, 0.22);
+}
+
+.camera-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.camera-main {
+  inset: 22px 42px 22px auto;
+  width: 272px;
+  z-index: 2;
+}
+
+.camera-secondary {
+  top: 92px;
+  left: 24px;
+  width: 218px;
+  height: 474px;
+  transform: rotate(-7deg);
+  z-index: 1;
+}
+
+.camera-note {
+  position: absolute;
+  right: 22px;
+  bottom: 28px;
+  z-index: 3;
+  width: min(290px, calc(100% - 44px));
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 18px;
+  background: rgba(247, 248, 245, 0.9);
+  color: var(--paper);
+  box-shadow: 0 18px 42px rgba(31, 36, 34, 0.16);
+  backdrop-filter: blur(14px);
+}
+
+.camera-note strong,
+.camera-note span {
+  display: block;
+}
+
+.camera-note span {
+  margin-top: 6px;
+  color: var(--titanium-soft);
+  line-height: 1.48;
+}
+
 .launch-card-top {
   display: flex;
   justify-content: space-between;
@@ -346,7 +414,7 @@ li {
 
 .launch-card h2 {
   margin: auto 0 0;
-  font-size: clamp(1.6rem, 2.35vw, 2.4rem);
+  font-size: 2.1rem;
 }
 
 .launch-card p {
@@ -480,7 +548,7 @@ li {
 }
 
 .shot-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .review-board {
@@ -566,7 +634,7 @@ li {
 
 .legal-card h1 {
   max-width: 480px;
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: 3rem;
 }
 
 .legal-card {
@@ -616,6 +684,21 @@ li {
 
   .launch-card {
     min-height: 280px;
+  }
+
+  .camera-proof {
+    min-height: 540px;
+  }
+
+  .camera-main {
+    right: 50%;
+    width: 268px;
+    transform: translateX(50%);
+  }
+
+  .camera-secondary {
+    width: 190px;
+    height: 414px;
   }
 
   .shot-grid img {
@@ -683,11 +766,11 @@ li {
   }
 
   h1 {
-    font-size: 1.72rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.28rem;
+    font-size: 1.6rem;
   }
 
   .launch-card h2 {
@@ -697,6 +780,32 @@ li {
   .lede,
   .launch-card p {
     font-size: 0.78rem;
+  }
+
+  .camera-proof {
+    min-height: 460px;
+  }
+
+  .camera-main {
+    width: 220px;
+  }
+
+  .camera-secondary {
+    top: 100px;
+    left: 8px;
+    width: 150px;
+    height: 326px;
+  }
+
+  .camera-note {
+    left: 16px;
+    right: auto;
+    width: min(300px, calc(100vw - 52px));
+  }
+
+  .camera-note span {
+    font-size: 0.94rem;
+    overflow-wrap: anywhere;
   }
 
   .hero-copy > *,

@@ -8,7 +8,9 @@
       "date": "2026-05-31",
       "app": "PureShot",
       "category": "No Filter Camera",
-      "summary": "A note about natural iPhone capture, direct controls, and not turning every face into plastic wrap."
+      "summary": "A note about natural iPhone capture, direct controls, and not turning every face into plastic wrap.",
+      "image": "https://pureshot.mesikalabs.com/assets/blog/pureshot-camera-thumb.png",
+      "imageAlt": "PureShot Process Zero camera interface thumbnail"
     }
   ]
 }
