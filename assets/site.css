@@ -610,6 +610,57 @@ li {
     repeating-linear-gradient(100deg, rgba(31, 36, 34, 0.03) 0 1px, transparent 1px 12px);
 }
 
+.resource-panel {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.resource-lead p:last-child {
+  margin-bottom: 0;
+}
+
+.resource-list {
+  display: grid;
+  gap: 12px;
+}
+
+.resource-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(218, 222, 216, 0.58)),
+    rgba(255, 255, 255, 0.28);
+  text-decoration: none;
+}
+
+.resource-card:hover {
+  border-color: var(--line-strong);
+}
+
+.resource-card span {
+  color: var(--accent-cool);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resource-card strong {
+  color: var(--paper);
+  font-family: var(--display);
+  font-size: 1.1rem;
+}
+
+.resource-card p {
+  margin-bottom: 0;
+  font-size: 0.86rem;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -670,6 +721,7 @@ li {
 @media (max-width: 920px) {
   .hero,
   .panel.split,
+  .resource-panel,
   .feature-list,
   .shot-grid,
   .review-board,

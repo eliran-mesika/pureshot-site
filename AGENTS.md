@@ -3,6 +3,7 @@
 ## Product Focus
 
 - This repo is the static public site for PureShot at `pureshot.mesikalabs.com`.
+- Follow `DESIGN.md` for visual rules, navigation structure, icon usage, and screenshot constraints.
 - Keep copy aligned with the current free Process Zero Cam launch: natural capture, local media handling, visible capture controls, and no tracking in the launch app.
 - Do not add paid, subscription, cloud-sync, or account-system claims unless the app repo and App Store metadata already support them.
 
