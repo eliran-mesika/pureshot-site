@@ -7,6 +7,8 @@ This repository intentionally contains only static website content:
 - `privacy/index.html`
 - `support/index.html`
 - `terms/index.html`
+- `robots.txt`
+- `sitemap.xml`
 - `assets/`
 
 It does not contain application source code, build scripts, secrets, private review notes, or internal launch documents.
