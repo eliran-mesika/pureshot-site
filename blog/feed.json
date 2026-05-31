@@ -1,0 +1,14 @@
+{
+  "title": "PureShot Blog",
+  "home": "https://pureshot.mesikalabs.com/blog/",
+  "items": [
+    {
+      "title": "What If a Camera App Just Took the Picture?",
+      "url": "https://pureshot.mesikalabs.com/blog/no-filter-camera/",
+      "date": "2026-05-31",
+      "app": "PureShot",
+      "category": "No Filter Camera",
+      "summary": "A note about natural iPhone capture, direct controls, and not turning every face into plastic wrap."
+    }
+  ]
+}
