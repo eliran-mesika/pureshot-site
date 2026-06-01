@@ -11,6 +11,7 @@ This repository intentionally contains only static website content:
 - `blog/feed.json`
 - `robots.txt`
 - `sitemap.xml`
+- `llms.txt`
 - `assets/`
 
 It does not contain application source code, build scripts, secrets, private review notes, or internal launch documents.
